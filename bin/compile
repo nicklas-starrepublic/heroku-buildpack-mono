@@ -124,7 +124,7 @@ set -e
 cd $BUILD_DIR
 
 # find a solution file
-SLN=$(find . -maxdepth 1 -iname "*.sln")
+SLN=$(find . -iname "*.sln")
 if [ $( echo "${SLN}" | wc -l ) -gt 1 ]; then
   error "Too many *.sln files"
 fi
